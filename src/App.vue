@@ -1,6 +1,11 @@
 <script setup>
 import HelloWorld from './components/HelloWorld.vue'
 import TheWelcome from './components/TheWelcome.vue'
+import JSConfetti  from 'js-confetti';
+
+const jsConfetti = new JSConfetti();
+
+
 </script>
 
 <template>
@@ -19,11 +24,14 @@ import TheWelcome from './components/TheWelcome.vue'
   <main>
     <!-- <TheWelcome /> -->
     <h2>Идет настройка проекта... Скоро появится хеадер :)</h2>
-    <img src="https://resizer.mail.ru/p/8e2e46c4-7137-5f91-8a6a-7bf4e963c943/AQACB_rBp9_0xvGVY942sS8CqVucCdtu8YKpYJacXOxNAs-gEpeDt2EturYJt-hSXunjquPgOmmBEuTD5ohw9vxeLUw.jpg">
+    <img id = 'zdun' @click = "jsConfetti.addConfetti({emojis: ['😎','👀','🧐']})" src="https://resizer.mail.ru/p/8e2e46c4-7137-5f91-8a6a-7bf4e963c943/AQACB_rBp9_0xvGVY942sS8CqVucCdtu8YKpYJacXOxNAs-gEpeDt2EturYJt-hSXunjquPgOmmBEuTD5ohw9vxeLUw.jpg">
   </main>
 </template>
 
 <style scoped>
+#zdun {
+  cursor: pointer;
+}
 header {
   line-height: 1.5;
 }
